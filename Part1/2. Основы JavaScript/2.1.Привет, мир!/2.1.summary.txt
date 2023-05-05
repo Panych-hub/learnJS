@@ -1,0 +1,13 @@
+<script> </script>
+
+Атрибут src
+<script src=".."> </script>
+Если src становлен, то содержание тега игнорируется
+
+
+Старый код:
+- использование атрибутов type и language
+- конструкция
+<script type="text/javascript"><!--
+    ...
+//--></script>

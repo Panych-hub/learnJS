@@ -1,0 +1,52 @@
+ECMA (European Computers Manufacturers Association)
+ECMAScript - стандарт скриптовых языков программирования -
+    “как создать скриптовой язык”
+ECMA-262 - версия ECMAScript, в которой прописана спецификация
+    скриптового языка общего назначения
+ES6
+JavaScript - “как использовать скриптовой язык”
+
+Языки над JS:
+- CofeeScript
+- TypeSCript
+- Flow
+- Dart
+- Brython
+
+HTML - HyperText Markup Language
+CSS - Cascading Style Sheets
+JS-код
+
+Особенности JS:
+- полная интеграция с HTML и CSS
+- простые вещи делаются просто
+- поддерживается всеми браузерами, включен по умолчанию
+
+JS-движок / интерпретатор (JS engine) - понимает и выполняет JavaScript-код
+    понимает, что означают действия, прописанные на JS
+    парсит, компилирует, выполняет
+- V8 (Google Chrome, Microsoft Edge, Opera)
+- SpiderMonkey (Firefox)
+- JavaScriptCore (Safari)
+
+Babel
+таблицы совместимости
+
+Библиотеки среды выполнения (Runtime Library - RTL)
+Среда выполнения - (Runtime environment - RTE)
+    предоставляет хост-объекты, с которыми работает JavaScript-движок
+    RTE = JS-движок + RTL
+- Клиент: RTE - браузер - окна и html-документы
+- Сервер: RTE - node.js - файловая система, процессы и запросы
+
+Возможности браузера
+- Работа с HTML и CSS
+- взаимодествие с пользователем (input, output)
+- отправка сетевых запросов
+- запоминание данных
+
+IDE (Integrated Development Environment)
+
+MDN (Mozilla development network)
+
+Консоль разработчика

@@ -1,0 +1,6 @@
+alert("Hello");
+
+prompt(title, [default]);
+для IE второй параметр обязателен
+
+confirm(question);
