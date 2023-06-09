@@ -1,7 +1,8 @@
 "use strict";
 console.log(this);
-// This зависит от того, когда и какая функция была запущена
+
 /*
+This зависит от того, когда и какая функция была запущена
 внутри функции?
 нет-> in script or module
     script - тот код, который запускается по умолчанию
@@ -56,10 +57,43 @@ const theObj = {
 let doLogThisGlobal = theObj.doLogThis;
 doLogThisGlobal();
 
-setTimeout(theObj.doLogThis, 1);
-// по спецификации должно быть Undefined, но так setTimeout - внешний API
+/*setTimeout(theObj.doLogThis, 1);
+по спецификации должно быть Undefined, но так setTimeout - внешний API
 
-// чтобы понять, чему равен this, нужно смотреть на то, где вызывается функция
-// this - выражение языка JS, поведение которого похоже на поведение
-// идентификатора, но связать значение с this, мы можем только особо формой вызова
-// normal function
+чтобы понять, чему равен this, нужно смотреть на то, где вызывается функция
+this - выражение языка JS, поведение которого похоже на поведение
+идентификатора, но связать значение с this, мы можем только особо формой вызова
+normal function*/
+
+const z = {
+    name: "2",
+    muFunc: () => {
+        return this.name;
+    }
+}
+
+const baz = z.muFunc();
+console.log(baz);
+
+function makeUser(){
+    return {
+        name: "John",
+        ref: this
+    }
+}
+let test = {
+    makeUser: makeUser
+}
+
+let user = test.makeUser();
+console.log(user.ref.name);
+
+
+let obj = {
+    met1(){
+        console.log(this)
+    },
+    met2: () => {console.log(this)}
+}
+obj.met1();
+obj.met2();
