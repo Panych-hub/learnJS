@@ -1,5 +1,4 @@
-/*
-
+// "use strict";
 function foo() {
     return this;
 }
@@ -17,9 +16,9 @@ console.log(
     foo(),       // global или undefined
 
     bar.foo(),   // bar
-    (bar.foo)(), // bar ???
+    (bar.foo)(), // bar
 
-    (bar.foo = bar.foo)(), // global ???
+    (bar.foo = bar.foo)(), // global
 );
 
 // `bar.baz`
@@ -27,12 +26,12 @@ console.log(bar.baz()); // bar
 
 let savedBaz = bar.baz;
 console.log(savedBaz()); // global
-*/
+
 
 
 var x = 10;
 
-let foo = {
+let foo1 = {
     x: 20,
 
     // Динамический `this`.
@@ -42,6 +41,7 @@ let foo = {
 
     // Лексический `this`.
     baz: () => this.x,
+    // baz: () => this,
 
     qux() {
         // Лексический в рамках данного вызова.
@@ -52,7 +52,7 @@ let foo = {
 };
 
 console.log(
-    foo.bar(), // 20, из `foo`
-    foo.baz(), // 10, из global
-    foo.qux(), // 20, из `foo` и стрелочной функции
+    foo1.bar(), // 20
+    foo1.baz(), // node: undefined, browser: 10
+    foo1.qux(), // 20
 );
